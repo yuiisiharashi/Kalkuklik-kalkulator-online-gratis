@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NovaTools - Tools Online Gratis</title>
+<style>
+body{
+  font-family: Arial;
+  text-align:center;
+  background:#f2f2f2;
+}
+.box{
+  background:white;
+  padding:20px;
+  margin:20px auto;
+  width:300px;
+  border-radius:15px;
+}
+input,button{
+  padding:10px;
+  margin:5px;
+}
+button{
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>NovaTools</h1>
+<p>Tools online gratis, cepat dan mudah</p>
+
+<div class="box">
+<h2>Kalkulator Diskon</h2>
+
+<input id="harga" placeholder="Harga">
+<input id="diskon" placeholder="Diskon %">
+
+<button onclick="diskon()">Hitung</button>
+
+<p id="hasil"></p>
+</div>
+
+
+<div class="box">
+<h2>Kalkulator Persen</h2>
+
+<input id="angka" placeholder="Angka">
+<input id="persen" placeholder="Persen %">
+
+<button onclick="persen()">Hitung</button>
+
+<p id="hasil2"></p>
+</div>
+
+
+<script>
+
+function diskon(){
+let harga = document.getElementById("harga").value;
+let d = document.getElementById("diskon").value;
+
+let hasil = harga - (harga*d/100);
+
+document.getElementById("hasil").innerHTML =
+"Harga akhir: "+hasil;
+}
+
+
+function persen(){
+let angka = document.getElementById("angka").value;
+let p = document.getElementById("persen").value;
+
+let hasil = angka*p/100;
+
+document.getElementById("hasil2").innerHTML =
+"Hasil: "+hasil;
+}
+
+</script>
+
+</body>
+</html>
